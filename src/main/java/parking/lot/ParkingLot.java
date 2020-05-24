@@ -18,6 +18,14 @@ public class ParkingLot {
         return this.spotsList.size();
     }
 
+    Integer getEmptySize() {
+        return this.size - this.spotsList.size();
+    }
+
+    Double usageRate() {
+        return (double) this.spotsList.size() / this.size;
+    }
+
     public Integer getParkingLotId() {
         return parkingLotId;
     }
@@ -26,9 +34,6 @@ public class ParkingLot {
         return this.size == this.spotsList.size();
     }
 
-    Double usageRate() {
-        return (double) this.spotsList.size() / this.size;
-    }
 
     Boolean park(Car car) {
         if (this.isFull()) {

@@ -16,7 +16,7 @@ class ParkingBoyTest {
         ParkingLot parkingLot2 = new ParkingLot(2, 10);
         Car car1 = new Car(1);
         parkingLot1.park(car1);
-        parkingBoy = new ParkingBoy(Arrays.asList(parkingLot1, parkingLot2));
+        parkingBoy = new ParkingBoy(Arrays.asList(parkingLot1, parkingLot2), "boy1");
     }
 
     @Test

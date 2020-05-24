@@ -6,9 +6,15 @@ import java.util.List;
 public class ParkingBoy {
 
     List<ParkingLot> parkingLots;
+    String parkingBoyName;
 
-    public ParkingBoy(List<ParkingLot> parkingLots) {
+    public ParkingBoy(List<ParkingLot> parkingLots, String parkingBoyName) {
         this.parkingLots = parkingLots;
+        this.parkingBoyName = parkingBoyName;
+    }
+
+    Integer getCurrentEmptyLots() {
+        return this.parkingLots.stream().mapToInt(ParkingLot::getEmptySize).sum();
     }
 
     String setCar(Car car) {
