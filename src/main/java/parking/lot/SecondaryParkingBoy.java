@@ -1,9 +1,6 @@
 package parking.lot;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class SecondaryParkingBoy {
 
@@ -26,5 +23,15 @@ public class SecondaryParkingBoy {
         return parkingBoy.setCar(car);
     }
 
+    ArrayList<String> getParkingBoyReports() {
+        ArrayList<String> list = new ArrayList<>();
+        this.parkingBoys.forEach(parkingBoy -> {
+            list.add(parkingBoy.toString());
+        });
+        return list;
+    }
 
+    String printReport() {
+        return String.join(";", this.getParkingBoyReports());
+    }
 }

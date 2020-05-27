@@ -9,6 +9,7 @@ import java.util.Arrays;
 class SecondaryParkingBoyTest {
 
     SecondaryParkingBoy secondaryParkingBoy;
+
     @BeforeEach
     void setUp() {
         ParkingLot parkingLot = new ParkingLot(1, 50);
@@ -33,5 +34,12 @@ class SecondaryParkingBoyTest {
         Car car = new Car(1);
         String result = secondaryParkingBoy.distribute(car);
         Assertions.assertEquals("ParkingLotId: 2", result);
+    }
+
+    @Test
+    void should_return_report() {
+        String result = secondaryParkingBoy.printReport();
+        String expected = "boy1,170,0.0,170;boy2,170,0.0,170";
+        Assertions.assertEquals(expected, result);
     }
 }

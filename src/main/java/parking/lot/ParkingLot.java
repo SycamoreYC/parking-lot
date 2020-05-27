@@ -15,7 +15,7 @@ public class ParkingLot {
     }
 
     Integer getSize() {
-        return this.spotsList.size();
+        return this.size;
     }
 
     Integer getEmptySize() {

@@ -13,6 +13,10 @@ public class ParkingBoy {
         this.parkingBoyName = parkingBoyName;
     }
 
+    public String getParkingBoyName() {
+        return parkingBoyName;
+    }
+
     Integer getCurrentEmptyLots() {
         return this.parkingLots.stream().mapToInt(ParkingLot::getEmptySize).sum();
     }
@@ -27,5 +31,21 @@ public class ParkingBoy {
         this.parkingLots.sort(Comparator.comparingDouble(ParkingLot::usageRate));
         this.parkingLots.get(0).park(car);
         return String.format("ParkingLotId: %s", this.parkingLots.get(0).getParkingLotId());
+    }
+
+    Integer getTotalSpace() {
+        return this.parkingLots.stream().mapToInt(ParkingLot::getSize).sum();
+    }
+
+    Double totalUsageRate() {
+        return (double) (this.getTotalSpace() - this.getCurrentEmptyLots()) / this.getTotalSpace();
+    }
+
+    @Override
+    public String toString() {
+        return this.parkingBoyName + ',' +
+                this.getTotalSpace() + ',' +
+                this.totalUsageRate() + ',' +
+                this.getCurrentEmptyLots();
     }
 }

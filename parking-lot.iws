@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e3dd64-30c1-4111-9db9-09eaf02adf75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/parking/lot/SecondaryParkingBoy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/parking/lot/SecondaryParkingBoyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parking-lot.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/parking-lot.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parking-lot.iws" beforeDir="false" afterPath="$PROJECT_DIR$/parking-lot.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parking-lot.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/parking-lot.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parking/lot/ParkingBoy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parking/lot/ParkingBoy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parking/lot/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parking/lot/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/parking/lot/ParkingBoyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parking/lot/ParkingBoyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parking/lot/SecondaryParkingBoy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parking/lot/SecondaryParkingBoy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parking/lot/SecondaryParkingBoyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parking/lot/SecondaryParkingBoyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +82,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -141,7 +140,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SecondaryParkingBoyTest.should_return_parking_lot_id_when_secondaryParkingBoy_distribute_the_car_to_a_parkingBoy">
+  <component name="RunManager" selected="Gradle.SecondaryParkingBoyTest.should_return_report">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -175,26 +174,6 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;parking.lot.ParkingBoyTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ParkingBoyTest.should_find_park_a_car" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;parking.lot.ParkingBoyTest.should_find_park_a_car&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -269,6 +248,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="SecondaryParkingBoyTest.should_return_report" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;parking.lot.SecondaryParkingBoyTest.should_return_report&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -294,11 +293,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SecondaryParkingBoyTest.should_return_report" />
         <item itemvalue="Gradle.SecondaryParkingBoyTest.should_return_parking_lot_id_when_secondaryParkingBoy_distribute_the_car_to_a_parkingBoy" />
         <item itemvalue="Gradle.SecondaryParkingBoyTest" />
         <item itemvalue="Gradle.ParkingBoyTest" />
         <item itemvalue="Gradle.ParkingBoyTest.should_park_a_car_in_the_emptiest_parking_lot" />
-        <item itemvalue="Gradle.ParkingBoyTest.should_find_park_a_car" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +324,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590052551683</updated>
-      <workItem from="1590052553942" duration="8767000" />
+      <workItem from="1590052553942" duration="16621000" />
     </task>
     <servers />
   </component>
@@ -337,26 +336,50 @@
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="184" width="374" height="634" key="#com.intellij.ide.util.MemberChooser" timestamp="1590324542092">
+    <state x="533" y="184" width="374" height="634" key="#com.intellij.ide.util.MemberChooser" timestamp="1590576186167">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="533" y="184" width="374" height="634" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1590324542092" />
-    <state width="1398" height="223" key="GridCell.Tab.0.bottom" timestamp="1590326818713">
+    <state x="533" y="184" width="374" height="634" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1590576186167" />
+    <state x="458" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590576470818">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="223" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1590326818713" />
-    <state width="1398" height="223" key="GridCell.Tab.0.center" timestamp="1590326818712">
+    <state x="458" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1590576470818" />
+    <state x="483" y="172" key="#xdebugger.evaluate" timestamp="1590577568381">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="223" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1590326818712" />
-    <state width="1398" height="223" key="GridCell.Tab.0.left" timestamp="1590326818712">
+    <state x="483" y="172" key="#xdebugger.evaluate/0.23.1440.877@0.23.1440.877" timestamp="1590577568381" />
+    <state width="1398" height="223" key="GridCell.Tab.0.bottom" timestamp="1590577650889">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="223" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1590326818712" />
-    <state width="1398" height="223" key="GridCell.Tab.0.right" timestamp="1590326818713">
+    <state width="1398" height="223" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1590577650889" />
+    <state width="1398" height="223" key="GridCell.Tab.0.center" timestamp="1590577650888">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="223" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1590326818713" />
+    <state width="1398" height="223" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1590577650888" />
+    <state width="1398" height="223" key="GridCell.Tab.0.left" timestamp="1590577650888">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="223" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1590577650888" />
+    <state width="1398" height="223" key="GridCell.Tab.0.right" timestamp="1590577650889">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="223" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1590577650889" />
+    <state width="1398" height="276" key="GridCell.Tab.1.bottom" timestamp="1590577619680">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="276" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1590577619680" />
+    <state width="1398" height="276" key="GridCell.Tab.1.center" timestamp="1590577619679">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="276" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1590577619679" />
+    <state width="1398" height="276" key="GridCell.Tab.1.left" timestamp="1590577619679">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="276" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1590577619679" />
+    <state width="1398" height="276" key="GridCell.Tab.1.right" timestamp="1590577619680">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="276" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1590577619680" />
     <state x="229" y="100" key="SettingsEditor" timestamp="1590055043736">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -377,5 +400,21 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1590325620425" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/parking/lot/ParkingBoy.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Remote">
+        <watch expression="((ParkingBoy)this).parkingBoyName" custom="parking.lot.ParkingBoy" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
