@@ -2,24 +2,27 @@ package parking.lot;
 
 public class Car {
 
-    Integer carId;
+    private int carId;
 
-    public Car(Integer carId) {
+    public Car(int carId) {
         this.carId = carId;
     }
 
-    public Integer getCarId() {
+    public int getCarId() {
         return carId;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        Car otherCar = (Car) obj;
-        return otherCar.getCarId().equals(this.getCarId());
+    public int hashCode() {
+        return String.valueOf(carId).hashCode();
     }
 
     @Override
-    public int hashCode() {
-        return this.carId.hashCode();
+    public boolean equals(Object obj) {
+        if (obj instanceof Car) {
+            Car car = (Car) obj;
+            return carId == car.getCarId();
+        }
+        return false;
     }
 }

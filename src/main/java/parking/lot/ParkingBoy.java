@@ -5,39 +5,59 @@ import java.util.List;
 
 public class ParkingBoy {
 
-    List<ParkingLot> parkingLots;
-    String parkingBoyName;
+    private List<ParkingLot> parkingLots;
+    private String parkingBoyName;
 
     public ParkingBoy(List<ParkingLot> parkingLots, String parkingBoyName) {
         this.parkingLots = parkingLots;
         this.parkingBoyName = parkingBoyName;
     }
 
+    public String parkToFirstEmptySpotParkingLot(Car car) {
+        ParkingLot parkingLot = getFirstEmptySpotParkingLot();
+        parkingLot.parkCar(car);
+        return String.format("ParkingLotId: %s", parkingLot.getParkingLotId());
+    }
+
+    private ParkingLot getFirstEmptySpotParkingLot() {
+        return parkingLots.stream().filter(parkingLot -> !parkingLot.isFull()).findFirst().get();
+    }
+
+    public String parkToEmptiestParkingLot(Car car) {
+        ParkingLot parkingLot = getEmptiestParkingLot();
+        parkingLot.parkCar(car);
+        return String.format("ParkingLotId: %s", parkingLot.getParkingLotId());
+    }
+
+    private ParkingLot getEmptiestParkingLot() {
+        parkingLots.sort(Comparator.comparingInt(ParkingLot::getEmptySize));
+        return parkingLots.get(parkingLots.size() - 1);
+    }
+
+    public String parkToHighestEmptyRateCarPark(Car car) {
+        ParkingLot parkingLot = this.getHighestEmptyRateParkingLot();
+        parkingLot.parkCar(car);
+        return String.format("ParkingLotId: %s", parkingLot.getParkingLotId());
+    }
+
+    private ParkingLot getHighestEmptyRateParkingLot() {
+        this.parkingLots.sort(Comparator.comparingDouble(ParkingLot::getUsageRate));
+        return this.parkingLots.get(0);
+    }
+
     public String getParkingBoyName() {
         return parkingBoyName;
     }
 
-    Integer getCurrentEmptyLots() {
+    public int getCurrentEmptyLots() {
         return this.parkingLots.stream().mapToInt(ParkingLot::getEmptySize).sum();
     }
 
-    String setCar(Car car) {
-        this.parkingLots.sort(Comparator.comparingInt(ParkingLot::getSize));
-        this.parkingLots.get(0).park(car);
-        return String.format("ParkingLotId: %s", this.parkingLots.get(0).getParkingLotId());
-    }
-
-    String setCarByEmptyRate(Car car) {
-        this.parkingLots.sort(Comparator.comparingDouble(ParkingLot::usageRate));
-        this.parkingLots.get(0).park(car);
-        return String.format("ParkingLotId: %s", this.parkingLots.get(0).getParkingLotId());
-    }
-
-    Integer getTotalSpace() {
+    public int getTotalSpace() {
         return this.parkingLots.stream().mapToInt(ParkingLot::getSize).sum();
     }
 
-    Double totalUsageRate() {
+    public double totalUsageRate() {
         return (double) (this.getTotalSpace() - this.getCurrentEmptyLots()) / this.getTotalSpace();
     }
 

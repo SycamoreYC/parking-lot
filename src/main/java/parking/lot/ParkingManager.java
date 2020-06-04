@@ -2,28 +2,28 @@ package parking.lot;
 
 import java.util.*;
 
-public class SecondaryParkingBoy {
+public class ParkingManager {
 
-    ParkingLot parkingLot;
+    private ParkingLot parkingLot;
 
-    List<ParkingBoy> parkingBoys;
+    private List<ParkingBoy> parkingBoys;
 
-    public SecondaryParkingBoy(ParkingLot parkingLot, List<ParkingBoy> parkingBoys) {
+    public ParkingManager(ParkingLot parkingLot, List<ParkingBoy> parkingBoys) {
         this.parkingLot = parkingLot;
         this.parkingBoys = parkingBoys;
     }
 
-    Boolean park(Car car) {
-        return this.parkingLot.park(car);
+    public Boolean park(Car car) {
+        return this.parkingLot.parkCar(car);
     }
 
-    String distribute(Car car) {
+    public String distribute(Car car) {
         Optional<ParkingBoy> parkingBoyOp = this.parkingBoys.stream().max(Comparator.comparingInt(ParkingBoy::getCurrentEmptyLots));
         ParkingBoy parkingBoy = parkingBoyOp.get();
-        return parkingBoy.setCar(car);
+        return parkingBoy.parkToFirstEmptySpotParkingLot(car);
     }
 
-    ArrayList<String> getParkingBoyReports() {
+    public ArrayList<String> getParkingBoyReports() {
         ArrayList<String> list = new ArrayList<>();
         this.parkingBoys.forEach(parkingBoy -> {
             list.add(parkingBoy.toString());
@@ -31,7 +31,7 @@ public class SecondaryParkingBoy {
         return list;
     }
 
-    String printReport() {
+    public String printReport() {
         return String.join(";", this.getParkingBoyReports());
     }
 }

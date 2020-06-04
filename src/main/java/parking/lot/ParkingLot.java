@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class ParkingLot {
 
-    ArrayList<Car> spotsList;
-    Integer parkingLotId;
-    Integer size;
+    private ArrayList<Car> spotsList;
+    private int parkingLotId;
+    private int size;
 
     public ParkingLot(Integer parkingLotId, Integer size) {
         this.parkingLotId = parkingLotId;
@@ -14,28 +14,27 @@ public class ParkingLot {
         this.spotsList = new ArrayList<>();
     }
 
-    Integer getSize() {
-        return this.size;
-    }
-
-    Integer getEmptySize() {
-        return this.size - this.spotsList.size();
-    }
-
-    Double usageRate() {
-        return (double) this.spotsList.size() / this.size;
-    }
-
-    public Integer getParkingLotId() {
+    public int getParkingLotId() {
         return parkingLotId;
     }
 
-    Boolean isFull() {
-        return this.size == this.spotsList.size();
+    public int getSize() {
+        return this.size;
     }
 
+    public int getCarAmount() {
+        return spotsList.size();
+    }
 
-    Boolean park(Car car) {
+    public int getEmptySize() {
+        return this.size - this.spotsList.size();
+    }
+
+    public double getUsageRate() {
+        return (double) this.spotsList.size() / this.size;
+    }
+
+    public boolean parkCar(Car car) {
         if (this.isFull()) {
             return false;
         }
@@ -43,7 +42,11 @@ public class ParkingLot {
         return true;
     }
 
-    void pickCar(Car car) {
+    public void pickCar(Car car) {
         this.spotsList.remove(car);
+    }
+
+    public boolean isFull() {
+        return this.size == this.spotsList.size();
     }
 }

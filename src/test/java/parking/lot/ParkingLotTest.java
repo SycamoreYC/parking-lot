@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ParkingLotTest {
 
     ParkingLot parkingLot;
@@ -19,14 +17,14 @@ class ParkingLotTest {
 
     @Test
     void should_park_a_car() {
-       parkingLot.park(car);
-       Assertions.assertEquals(1, parkingLot.getSize());
+       parkingLot.parkCar(car);
+       Assertions.assertEquals(1, parkingLot.getCarAmount());
     }
 
     @Test
     void should_pick_a_car() {
-        parkingLot.park(car);
+        parkingLot.parkCar(car);
         parkingLot.pickCar(car);
-        Assertions.assertEquals(0, parkingLot.getSize());
+        Assertions.assertEquals(10, parkingLot.getEmptySize());
     }
 }

@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-class SecondaryParkingBoyTest {
+class ParkingManagerTest {
 
-    SecondaryParkingBoy secondaryParkingBoy;
+    ParkingManager secondaryParkingBoy;
 
     @BeforeEach
     void setUp() {
@@ -16,10 +16,10 @@ class SecondaryParkingBoyTest {
         ParkingLot parkingLot1 = new ParkingLot(2,100);
         ParkingLot parkingLot2 = new ParkingLot(3, 70);
         ParkingLot parkingLot3 = new ParkingLot(4, 80);
-        ParkingLot parkingLot4 = new ParkingLot(5, 90);
+        ParkingLot parkingLot4 = new ParkingLot(5, 100);
         ParkingBoy parkingBoy1 = new ParkingBoy(Arrays.asList(parkingLot1, parkingLot2), "boy1");
         ParkingBoy parkingBoy2 = new ParkingBoy(Arrays.asList(parkingLot3, parkingLot4), "boy2");
-        secondaryParkingBoy = new SecondaryParkingBoy(parkingLot, Arrays.asList(parkingBoy1, parkingBoy2));
+        secondaryParkingBoy = new ParkingManager(parkingLot, Arrays.asList(parkingBoy1, parkingBoy2));
     }
 
     @Test
@@ -33,13 +33,13 @@ class SecondaryParkingBoyTest {
     void should_return_parking_lot_id_when_secondaryParkingBoy_distribute_the_car_to_a_parkingBoy() {
         Car car = new Car(1);
         String result = secondaryParkingBoy.distribute(car);
-        Assertions.assertEquals("ParkingLotId: 2", result);
+        Assertions.assertEquals("ParkingLotId: 4", result);
     }
 
     @Test
     void should_return_report() {
         String result = secondaryParkingBoy.printReport();
-        String expected = "boy1,170,0.0,170;boy2,170,0.0,170";
+        String expected = "boy1,170,0.0,170;boy2,180,0.0,180";
         Assertions.assertEquals(expected, result);
     }
 }
